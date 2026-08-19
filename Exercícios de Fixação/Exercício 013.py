@@ -15,7 +15,7 @@ while True:
     else:
         len(lista_cadastro)
         lista_cadastro.append((nome , idade))
-            
+        
     escolha = str(input('Quer continuar? ')).strip().upper()
     
     while escolha != 'N' and escolha != 'S':

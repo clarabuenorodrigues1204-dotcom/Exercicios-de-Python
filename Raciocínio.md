@@ -17,3 +17,11 @@ guardando tudo em uma lista. No final, mostre:
 ---
 Exercício Python 085: Crie um programa onde o usuário possa digitar sete valores numéricos e cadastre-os em uma lista única que mantenha separados os valores pares e ímpares. 
 No final, mostre os valores pares e ímpares em ordem crescente.
+
+1- Criar uma lista que irá receber 7 números do usuário
+2 - A cada volta do for verificar:
+    se o número for par, faça:
+        inserir na lista em tal posição
+    senão, faça
+        adicionar na lista
+3 - mostrar na tela a lista ordenada em ordem crescente.

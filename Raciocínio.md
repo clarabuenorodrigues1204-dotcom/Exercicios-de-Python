@@ -25,3 +25,13 @@ No final, mostre os valores pares e ímpares em ordem crescente.
     senão, faça
         adicionar na lista
 3 - mostrar na tela a lista ordenada em ordem crescente.
+
+Exercício Python 086: Crie um programa que declare uma matriz de dimensão 3×3 e preencha com valores lidos pelo teclado. No final, mostre a matriz na tela, com a formatação correta.
+
+1 - Criar uma lista que vai guardar 3 listas dentro dela e vão ser preenchidas de acordo com os números que o usuário digitar
+2 - Entrada do usuário 
+3 - Fazer um loop de 9 voltas, adicionar os números digitados dentro da primeira sublista.
+    - se a primeira sublista atingir 3 números dentro dela, faça:
+        adicionar os próximos números dentro da segunda sublista:
+    - se a segunda sublista atingir 3 números, faça:
+        adicionar os ultimos 3 números na terceira sublista

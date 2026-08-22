@@ -295,3 +295,70 @@ No final, mostre os valores pares e ímpares em ordem crescente.
 4 - fazer a validação  de saída
 5 -fazer o menu de opções se atrelar com as informações, e mostrar como um boletim mesmo
 
+ Nível 6 — Misturando tudo
+
+## Sistema de notas
+
+Cadastre alunos e suas notas.
+
+Depois mostre:
+
+- [x] Média de cada aluno; 
+- Maior média; 
+	- fica dentro da lista de alunos aprovados - ordenado - mostrar media na escolha
+- Menor média; 
+	- menor fica dentro da lista de alunos reprovados - ordenado - mostrar media na escolha
+- Alunos aprovados;
+- Alunos reprovados.
+**Foco:** listas aninhadas, loops e cálculos.
+
+---
+
+## 14. Contagem de caracteres
+
+Receba uma frase e informe:
+
+- Quantidade de caracteres;
+- Quantidade de espaços;
+- Quantidade de vogais;
+- Quantidade de consoantes.
+
+**Foco:** percorrer strings.
+
+1 - Criar entrada do usuário, que vai ser do tipo string
+2- Percorrer a frase toda e voltar na tela a quantidade de caracteres ela apresenta   - função len()
+3 - Criar contadores para guardar quantos espaços tem na frase, quantas vogais tem na frase e quantas consoantes tem na frase
+4 - Mostrar na tela
+
+---
+
+
+## 15. Palíndromo - (Já tinha feito antes, então vai ser só revisão do código)
+
+Leia uma palavra ou frase e descubra se ela pode ser lida da mesma forma de trás para frente.
+
+**Foco:** strings, índices e listas. 
+
+- **Como a frase é percorrida?**
+	-  for i in range(len(junto) - 1, -1 , -1)  - `len()` - 1 retorna a **quantidade de elementos**, e o -1 serve para encontra o **índice do último elemento**. o segundo -1 é o **limite de parada**. O terceiro -1 serve para dizer ao programa "vá diminuindo 1 a cada repetição."
+	- inverso += junto[i] - é um acumulador de string, eu não estou somando as letras e sim juntando/concatenando elas em uma coisa só mas mantendo a frase ex: araraarara
+
+- **Como você verificou se era igual ao contrário?**
+	- usando um if, se o inverso que é (ex: arara) for igual ao junto (ex: arara) então é um palíndromo, se não, não é um palíndromo
+	-
+- **Qual método de string você usou?**
+		- replace()
+		- strip()
+		- split()
+		- join()
+		- lower()
+		- len() - pode ser usada em outros locais sem ser string
+	
+- **Onde entra o `for`?**
+	`for`: percorre, um por um, os índices fornecidos pelo `range()` e repete o bloco de código para cada índice.
+	
+- **Onde entra o `if`?**
+	**`if`** → compara a string original (`junto`) com a string invertida (`inverso`) para verificar se são iguais e determinar se a palavra/frase é um palíndromo.
+	
+- **O que acontece com espaços e letras maiúsculas/minúsculas?**
+	os espaços desnecessário são tirados com o .strip() (mas apenas os espaços do início e do final da string) o .lower() transforma a frase em minúsculo, .join() concatena os elementos de uma sequência em uma única string, utilizando a string que chamou o método como separador.

@@ -14,6 +14,7 @@ retas = []
 
 for _ in range(3):
     retas.append(float(input('Digite o valor das retas: ')))
+    
 if retas[0] < retas[1] + retas[2] and retas[1] < retas[0] + retas[2] and retas[2] < retas[0] + retas[1]:
     print('DÁ PARA FORMAR UM TRIÂNGULO')
 else:

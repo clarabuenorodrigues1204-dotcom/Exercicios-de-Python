@@ -53,7 +53,9 @@ while True:
             if escolha - 1 == k:
                 print(f'{'='*10}Ficha do jogador {v["name"]}{'='*10}')
                 print(f'Nome: {v["name"]}\nPartidas jogadas: {v["quant_partidas"]}\nGols: {v["Gols"]}\nGols totais: {v["total de gols da temporada"]}')
+                
     print('='*45)
+    
     parada = str(input('Deseja encerrar o programa? ')).strip().upper()
     #Validação de parada
     while parada != "N" and parada != "S":

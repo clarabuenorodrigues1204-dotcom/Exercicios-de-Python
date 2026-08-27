@@ -51,10 +51,10 @@ while True:
     else:
         for k, v in enumerate(ficha_jogadores):
             if escolha - 1 == k:
-                print(f'{'='*10}Ficha do jogador {v["name"]}{'='*10}')
-                print(f'Nome: {v["name"]}\nPartidas jogadas: {v["quant_partidas"]}\nGols: {v["Gols"]}\nGols totais: {v["total de gols da temporada"]}')
+                print(f'{'='*10} LEVANTAMENTO DO JOGADOR - {v["name"]} {'='*10}')
+                print(f'Partidas jogadas: {v["quant_partidas"]}\nGols totais: {v["total de gols da temporada"]}')
                 
-    print('='*45)
+    print('='*49)
     
     parada = str(input('Deseja encerrar o programa? ')).strip().upper()
     #Validação de parada

@@ -42,10 +42,10 @@ for k, v in enumerate(lista_cidadoes):
 
 media = sum_idades / count
 
-for k, v in enumerate(lista_cidadoes):
-    
+for k, v in enumerate(lista_cidadoes):    
     if v['Idade'] > media:
         lista_idadesMaiores.append((v['Nome'], v['Idade']))
+        
 print('=-'*40)
 print(f'A) - Foram cadastradas {count} pessoas')
 print(f'B) - A média de idade entre os cidadões é {media:.2f}')

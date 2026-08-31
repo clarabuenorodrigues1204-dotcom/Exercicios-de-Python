@@ -24,3 +24,11 @@ for i in range(0,5):
     num = input('Numeros :')
     lista.append(num)
 pac(*lista) # - desempacotamento
+
+#parâmetro opcional
+def somar (a=0,b=0,c=0):
+    s = a + b + c
+    print(s)
+somar(2,5,6)
+somar(2,5,)
+somar(2)

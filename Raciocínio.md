@@ -362,3 +362,272 @@ Leia uma palavra ou frase e descubra se ela pode ser lida da mesma forma de trá
 	
 - **O que acontece com espaços e letras maiúsculas/minúsculas?**
 	os espaços desnecessário são tirados com o .strip() (mas apenas os espaços do início e do final da string) o .lower() transforma a frase em minúsculo, .join() concatena os elementos de uma sequência em uma única string, utilizando a string que chamou o método como separador.
+
+---
+# Desafio final — Cadastro completo
+
+Crie um sistema que permita:
+
+- Cadastrar números;
+- Impedir números duplicados;
+- Remover números;
+- Pesquisar um número;
+- Mostrar números pares;
+- Mostrar números ímpares;
+- Mostrar maior e menor;
+- Mostrar a lista ordenada;
+- Contar quantos números existem;
+- Encerrar através de um menu.
+
+### Regra extra
+
+> Não utilize `sort()` nem `sorted()` para fazer a ordenação.
+
+**Foco:** praticamente tudo que foi estudado até aqui.
+
+
+---
+## Exercício Python 091: 
+Crie um programa onde 4 jogadores joguem um dado e tenham resultados aleatórios. Guarde esses resultados em um dicionário em Python. No final, coloque esse dicionário em ordem, sabendo que o vencedor tirou o maior número no dado.
+
+1 - Criar um dicionário vazio com o nome (resultado_dados) e adicionar os 4 resultados aleatórios dentro dele
+2 - ordenar esse dicionário de alguma forma, opções:
+- sorted
+- adicionar os resultados dentro de uma lista e depois ordenar
+- 3 - adicionando já na ordem correta
+3- mostrar no terminal qual foi o jogador que tirou o maior valor no dado
+
+---
+
+## Exercício Python 092: 
+Crie um programa que leia nome, ano de nascimento e carteira de trabalho e cadastre-o (com idade) em um dicionário. Se por acaso a CTPS for diferente de ZERO, o dicionário receberá também o ano de contratação e o salário. Calcule e acrescente, além da idade, com quantos anos a pessoa vai se aposentar.
+
+1- Criar um dicionário vazio
+2- Criar entrada do usuário "Nome" , "Ano de nascimento , "Carteira de trabalho"
+3- importar a biblioteca que permite obter o ano atual - **datetime** -  calcular a idade e adicionar na chave idade.
+4 - Se o CTPS != de 0 faça:
+- adicionar duas chaves novas na ficha do usuário que será: "Ano de contratação" e "Salário"
+-senão:
+- mostrar apenas as informações atuais do usuário
+5 - Depois de adicionar a chave idade, devemos fazer o cálculo de quantos anos faltam para o usuário aposentar
+6- fazer interface do terminal bonitinha
+7- Mostrar informações no terminal
+###### Próximos passos
+
+**1 — Criar uma interface para acessar as fichas**
+
+- Mostrar uma lista dos cidadãos cadastrados.
+- Permitir escolher qual ficha visualizar.
+- Usar o índice da lista para localizar a ficha.
+
+**2 — Melhorar a apresentação da ficha**
+
+- Colocar o nome do cidadão no título.
+- Fazer o `for` percorrer as fichas e mostrar cada uma com seu respectivo nome.
+
+Exemplo da ideia:
+
+```
+═════════════════════════════════════════════
+       FICHA COMPLETA — CLARA BUENO #1
+═════════════════════════════════════════════
+```
+
+**3 — Salvar os cadastros em JSON**
+
+- Fazer os dados continuarem existindo mesmo depois de fechar o programa.
+- Ao iniciar o programa, carregar os cadastros existentes.
+- Ao cadastrar uma pessoa, atualizar o arquivo.
+
+**4 — Criar uma barra de pesquisa**  
+Permitir pesquisar uma pessoa pelo:
+
+- Nome
+- CPF
+
+Aqui você vai começar a trabalhar com algo bem interessante: **percorrer a lista de dicionários e comparar os valores das chaves**.
+
+**5 — Criar validações dos dados**
+
+Por exemplo:
+
+- Não permitir ano de nascimento impossível.
+- Não permitir salário negativo.
+- CPF com quantidade incorreta de dígitos.
+- Não permitir CPF duplicado.
+- Não permitir opções diferentes das disponíveis.
+- Verificar se o ano de contratação faz sentido em relação ao nascimento.
+
+6- fazer distribuição de funções e começar a tornar esse exercício em um mini programa de cadastro real
+
+---
+## Exercício Python 093
+Crie um programa que gerencie o aproveitamento de um jogador de futebol. O programa vai ler o nome do jogador e quantas partidas ele jogou. Depois vai ler a quantidade de gols feitos em cada partida. No final, tudo isso será guardado em um dicionário, incluindo o total de gols feitos durante o campeonato.
+
+1- Criar um dicionário vazio com os nome - ficha_jogador = { }
+2 - Criar 4 entradas que serão: nome_jogador, quant_partidas, gols_feitos, total_gols.
+3 - Quando ele der a quantidade de partidas jogadas, fazer um for repetir a quantidade de partidas que ele registrou, e dentro desse for ele vai pedir o tanto de gols de cada partida.
+4 - criar lista que vai armazena o dicionário com as informações do jogador
+4- mostrar ficha completa com o total de gols da temporada
+
+---
+## Exercício Python 094
+Crie um programa que leia nome, sexo e idade de várias pessoas, guardando os dados de cada pessoa em um dicionário e todos os dicionários em uma lista. No final, mostre: A) Quantas pessoas foram cadastradas B) A média de idade C) Uma lista com as mulheres D) Uma lista de pessoas com idade acima da média
+
+1 - Criar um dicionário temporário vazio chamado - ficha_tempo = { }
+2 - Criar uma lista vazia que vai receber cada dicionário
+3 - Se dicionário chegar ao total de 3 informações, adicionar a lista
+4 - criar uma variável contadora contar quantas pessoas foram cadastradas
+5 - media de idade que vai ser - idades / pelo total de pessoas cadastradas (só vai ser feito depois de saber o total de pessoas)
+- Fazer um for k, v in enumerate(lista tal)
+- criar uma lista vazia que terá somente as idades
+6 - fazer uma lista só para as mulheres
+7 - uma lista somente com pessoas que tenha a idade acima da média de idades 
+
+---
+## Exercício Python 096
+Faça um programa que tenha uma função chamada área(), que receba as dimensões de um terreno retangular (largura e comprimento) e mostre a área do terreno.
+
+1 - Definir uma função que vai se chamar (area) e vai receber como parâmetro:
+- b - base
+- h - altura
+- calculo = b x h
+ou:
+definir função area sem parâmetro e criar variáveis dentro dela com o nome de b e h e fazer o calculo
+2 - fazer a entrada do usuário
+3 - chamar a função
+
+---
+## Exercício Python 097
+Faça um programa que tenha uma função chamada escreva(), que receba um texto qualquer como parâmetro e mostre uma mensagem com tamanho adaptável.     
+
+Ex:                                                                                                                                                                        escreva(‘Olá, Mundo!’) Saída:                                                                                                                          ~~~~~~~~~                                                                                                                                         Olá, Mundo!                                                                                                                                          ~~~~~~~~~ 
+1 - Definir uma função chamada escreva()
+2 - fazer a entrada do usuário ou definir a frase e guarda em uma variável
+3 - verificar o tamanho do texto e multiplicar o tamanho pelo '='
+4 - mostrar na tela
+
+---
+## Exercício Python 098
+Faça um programa que tenha uma função chamada contador(), que receba três parâmetros: início, fim e passo. Seu programa tem que realizar três contagens através da função criada:             
+
+a) de 1 até 10, de 1 em 1                                                                                                                      b) de 10 até 0, de 2 em 2                                                                                                                      c) uma contagem personalizada
+
+1 - Criar uma função chamada contador() que terá 3 parâmetros:
+- inicio
+- meio
+- fim
+2 - criar um for in range (1,10,1):
+- de 1 até 10, pulando de 1 em 1
+3 - criar um for in range(10, -1 , -2):
+- de 10 até 0, pulando de 2 em 2
+4 - criar um for in range(personalizado)
+5 - mostrar na tela
+
+---
+## Exercício Python 099
+Faça um programa que tenha uma função chamada maior(), que receba vários parâmetros com valores inteiros. Seu programa tem que analisar todos os valores e dizer qual deles é o maior.
+
+1 - Criar uma função com o nome "maior()" que terá varios parâmetros dentro dela
+2 - já que eu não sei a quantidade de valor, vou usar o empacotador
+3 - fazer um comparador e um contador
+4 - mostrar na tela
+
+---
+## Exercício Python 100
+Faça um programa que tenha uma lista chamada números e duas funções chamadas sorteia() e somaPar(). A primeira função vai sortear 5 números e vai colocá-los dentro da lista e a segunda função vai mostrar a soma entre todos os valores pares sorteados pela função anterior.
+
+1 - criar uma lista vazia chamada número
+2 - criar a função sorteia() que terá dentro dela um randint que irá sortear 5 números e depois colocar eles dentro da lista criada
+- return numeros
+3 - criar a função soma_par() que será responsável por:
+	pares = 0
+- for valores in numeros:
+	- se os valores sorteados  forem %2 == 0, faça:
+		somar esses valores e mostrar na tela o resultado
+		pares += valores
+- return pares
+---
+
+## Exercício Python 101
+Crie um programa que tenha uma função chamada voto() que vai receber como parâmetro o ano de nascimento de uma pessoa, retornando um valor literal indicando se uma pessoa tem voto NEGADO, OPCIONAL e OBRIGATÓRIO nas eleições.
+
+1- Criar a função voto() que vai receber como parâmetro o ano de nascimento
+2 - importar biblioteca datetime para pegar o ano atual
+3 - fazer uma verificação
+-
+- senão, se a idade >= 65, faça
+	- print("voto opcional")
+
+ - se a idade da pessoa for >= 18, faça
+	- print("voto obrigatório")
+
+- senão, faça
+	- print("voto não obrigatório")
+
+---
+## Exercício Python 102
+Crie um programa que tenha uma função fatorial() que receba dois parâmetros: o primeiro que indique o número a calcular e outro chamado show, que será um valor lógico (opcional) indicando se será mostrado ou não na tela o processo de cálculo do fatorial.
+
+1-  Criar uma função chamada fatorial(), que irá receber dois parâmetros - o número que será calculado o fatorial e o outro chamado show
+2 - criar a entrada do usuário aonde ele colocará o número para ser fatorado
+3- criar a escolha do usuário em relação se vai ou não mostrar o processo de calculo
+- se a resposta for [ 1 ] - Mostrar processo de cálculo
+- senão, se a resposta for [ 2 ] - Mostrar somente o resultado
+4 - Fazer validação referente a número negativo
+- se o valor dado pelo usuário for negativo faça:
+	- Não existe fatorial de número negativo
+- senão, faça:
+	- continue
+5 - opcional: usar a biblioteca math.factorial()
+	- usar o while invés da biblioteca
+	- usar o for invés da biblioteca
+
+---
+## Exercício Python 103
+Faça um programa que tenha uma função chamada ficha(), que receba dois parâmetros opcionais: o nome de um jogador e quantos gols ele marcou. O programa deverá ser capaz de mostrar a ficha do jogador, mesmo que algum dado não tenha sido informado corretamente.
+
+1. OBJETIVO
+   O que o programa precisa fazer?
+	- O PROGRAMA PRECISA MOSTRAR A FICHA DO JOGADOR, INDEPENDENTE SE ELE FORNECEU O NOME E O NÚMERO DE GOLS
+
+3. ENTRADAS
+   Quais informações entram?
+	- Nome do jogador e o número de gols marcados
+
+5. REPRESENTAÇÃO
+   Como cada informação será representada?
+	- jogador - parâmetro 1
+	- gols - parâmetro 2
+   Qual o tipo?
+	- jogador = string
+	- gols = int -> vai iniciar como uma string vazia e irá ser convertido em int
+   O que representa ausência?
+	- jogador = "" -> representa vazio
+	- gols = 0
+
+7. CASOS / REGRAS
+   Quais situações diferentes podem acontecer?
+	- ficha("Pedro" , 4)
+	- ficha(" ", 5)
+	- ficha("Pedro", [vazio] )
+	- ficha(" ", [vazio])
+
+9. PROCESSAMENTO
+   O que preciso fazer com os dados?
+	-  devo verificar se o usuário forneceu ou não as informações respectivas, fazer verificação para cada caso possível
+10. SAÍDA
+   O que deve ser produzido?
+	- deve ser mostrado o nome do jogador e o número de gols marcado, mas se não houver nome, ou não houver número de gols, fazer uma saída personaliza  
+11. CASOS DE TESTE
+   Com quais valores vou verificar minha lógica?
+	- nome: Pedro
+	- gols: 5
+	- nome: " "
+	- gols 3
+	-nome: "Pedro"
+	- gols: [vazio]
+	- nome: " "
+	- gols:[vazio]
+
+

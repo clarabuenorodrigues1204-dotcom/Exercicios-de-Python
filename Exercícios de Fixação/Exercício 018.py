@@ -5,32 +5,30 @@ catalogo_jogos = {}
 lista_catalogo_jogos = []
 notas = []
 media = soma = cont = 0
+maior_media = []
 
 while True:
     catalogo_jogos['Nome'] = input('Nome do jogo: ').strip().title()
     catalogo_jogos['Gênero'] = (input('Gênero do jogo: ')).strip().upper()       
      
-    #Pega a nota que está no tipo 'string' e converte para 'float'
-    nota = input('Nota do jogo [0 a 10]? ')
-    nota = float(nota)
-    
-    #Verifica e valida se a nota recebida foi menor que 0 ou maior que 10, se sim mostra mensagem
-    while nota < 0 or nota > 10:
-        nota = input('Digite uma nota de 0 a 10: ')
+   #pega a nota e verifica se o número digitado é menor que 0 ou maior que 10, e faz o tratamento do erro
+    while True:
+        try:
+            nota = float(input('Nota do jogo [0 a 10]? '))
         
-        while not nota.replace('.', '', 1).isdigit():
-            nota = input('Digite um número válido [0 a 10]: ')
+        #Verifica e valida se a nota recebida foi menor que 0 ou maior que 10, se sim mostra mensagem
+            if 0 <= nota <= 10:
+                break
             
-        nota = float(nota)       
+        except ValueError:
+            print('Digite apenas números [0 a 10]')   
     #Depois da verificação e conversão, adiciona a nota no dicionário
     catalogo_jogos['Nota'] = nota
-    
-    #Verifica se o dicionário atingiu 3 informações, se sim, adiciona lista  
-    if len(catalogo_jogos) == 3:
-        
-        lista_catalogo_jogos.append(catalogo_jogos.copy())
-        print(lista_catalogo_jogos)
-    
+     
+    #Adiciona dentro de uma lista  
+    lista_catalogo_jogos.append(catalogo_jogos.copy())
+    print(lista_catalogo_jogos)
+
     escolha_usuario = input('Deseja continuar catalogando os jogos? ').strip().upper()
     
     #Validação e verificação da escolha do usuário
@@ -55,7 +53,7 @@ media = soma / len(lista_catalogo_jogos)
 for notas_media in lista_catalogo_jogos:
     if notas_media['Nota'] > media:
         cont += 1
-        
+           
 #Adiciona somente as notas em uma lista separada, depois pega a maior e a menor nota     
 for nota in lista_catalogo_jogos:
     notas.append(nota['Nota'])
